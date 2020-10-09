@@ -10,15 +10,20 @@ def single_number(arr):
     #if it is different
     #return the item that is not equal to the others
     
-    for i in arr:
-        my_list = iter([arr])
-        x = next(my_list)
-        for i in x:
-            if i != item and item != 0:
-                return x[item]
-    # for i in range(0, len(arr), 2): 
-    #     if i == len(arr) - 1:
-    #         return arr[i]
+    # for i in arr:
+    #     my_list = iter([arr])
+    #     x = next(my_list)
+    #     for i in x:
+    #         if i != item and item != 0:
+    #             return x[item]
+    for i in range(0, len(arr), 2):
+        if arr[i] != arr[i+1]:
+            return arr[i]
+            
+            #if i == len(arr) - 1:
+
+    
+                #return arr[i]
         
 
 

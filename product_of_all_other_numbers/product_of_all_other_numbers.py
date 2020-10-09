@@ -4,23 +4,46 @@ Returns: a List of integers
 '''
 from functools import reduce  
 import operator
-
-def product_of_all_other_numbers(arr):
-    # Your code here
-    my_new_list = []
+import math
+def product(arr):
+        # Your code here
+    
     
     #loop through h array
-    for i in range(0, len(arr), len(arr)):
+    for i in range(0, len(arr), 1):
     #if it is not equal to th item in that index
         if i != len(arr)-1:
     #multiply the things in the numbers in the array
             b = reduce(operator.mul, arr, 1)
-            #product_of_all_other_numbers(i)
-    # append that number into a new array 
-            my_new_list.append(b)
-    # return the array
-            return my_new_list
 
+            #product_of_all_other_numbers(arr[i])
+    # append that number into a new array 
+            return m.append(b)
+
+
+def product_of_all_other_numbers(arr):
+#     # Your code here
+        m = []
+    
+#     #loop through h array
+        for i in range(len(arr)):
+                m.append(math.prod(list(arr[:i] + arr[i+1:])))
+
+#     #if it is not equal to th item in that index
+#         if i != len(arr)-1:
+#     #multiply the things in the numbers in the array
+#             b = reduce(operator.mul, arr, 1)
+
+#             #product_of_all_other_numbers(arr[i])
+#     # append that number into a new array 
+#             m.append(b)
+    # return the array
+            
+        # for i in range(len(arr)):
+        #         map.prod
+        #x = map(product, (arr))
+
+        return m
 
 # if __name__ == '__main__':
 #     # Use the main function to test your implementation
